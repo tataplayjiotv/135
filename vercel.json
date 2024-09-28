@@ -101,16 +101,18 @@
       "dest": "/api/x-play.php",
       "headers": {
         "Cache-Control": "max-age=84000, public"
-      },
-      {
-      "src": "/j-play",
-      "dest": "/api/j-play.php",
-      "headers": {
-        "Cache-Control": "max-age=84000, public"
-      },
-      {
+      }
+    },
+    {
       "src": "/j-playlist",
       "dest": "/api/j-playlist.php",
+      "headers": {
+        "Cache-Control": "max-age=84000, public"
+      }
+    },
+    {
+      "src": "/j-play",
+      "dest": "/api/j-play.php",
       "headers": {
         "Cache-Control": "max-age=84000, public"
       }
