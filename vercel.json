@@ -114,6 +114,7 @@
       "headers": {
         "Cache-Control": "max-age=84000, public"
       }
-      ],
+    }
+  ],
   "regions": ["bom1"]
 }
