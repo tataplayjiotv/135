@@ -115,6 +115,20 @@
       "dest": "/api/j-play.php",
       "headers": {
         "Cache-Control": "max-age=84000, public"
+           }
+    },
+    {
+      "src": "/tp-playlist",
+      "dest": "/api/tp-playlist.php",
+      "headers": {
+        "Cache-Control": "max-age=84000, public"
+      }
+    },
+    {
+      "src": "/tp-play",
+      "dest": "/api/tp-play.php",
+      "headers": {
+        "Cache-Control": "max-age=84000, public"
       }
     }
   ],
