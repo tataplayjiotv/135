@@ -1,6 +1,6 @@
 <?php
 // The original M3U playlist URL
-$playlist_url = 'http://mega4k.one:8080/get.php?username=monu1234&password=monu4321&type=m3u_plus';
+$playlist_url = 'http://sansat.org:88/get.php?username=02014507700695&password=VILRJM645N662BJ&type=m3u';
 $serverAddress = $_SERVER['HTTP_HOST'] ?? 'default.server.address';
 
 // Fetch the playlist content
@@ -12,7 +12,7 @@ if ($playlist_content === false) {
 
 // Replace URLs in the playlist
 $modified_content = str_replace(
-    "http://mega4k.one:8080/monu1234/monu4321/", 
+    "http://sansat.org:88/02014507700695/VILRJM645N662BJ/", 
     "https://$serverAddress/h-play?id=", 
     $playlist_content
 );
