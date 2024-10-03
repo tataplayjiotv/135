@@ -1,6 +1,6 @@
 <?php
 // The original M3U playlist URL
-$playlist_url = 'http://sansat.org:88/get.php?username=02014507700695&password=VILRJM645N662BJ&type=m3u';
+$playlist_url = 'http://localhost:8000/tataplay /m3u.php';
 $serverAddress = $_SERVER['HTTP_HOST'] ?? 'default.server.address';
 
 // Fetch the playlist content
@@ -12,13 +12,13 @@ if ($playlist_content === false) {
 
 // Replace URLs in the playlist
 $modified_content = str_replace(
-    "http://sansat.org:88/02014507700695/VILRJM645N662BJ/", 
+    "http://localhost:8000/tataplay /", 
     "https://$serverAddress/h-play?id=", 
     $playlist_content
 );
 
 // Remove both .mkv, .mp4, and other entries along with the previous #EXTINF line
-$modified_content = preg_replace('/#EXTINF:[^\r\n]*\r?\n[^\r\n]+\.(mkv|mp4|avi|flv|webp|webm|divx|ts)\r?\n/', '', $modified_content);
+$modified_content = preg_replace('/#EXTINF:[^\r\n]*\r?\n[^\r\n]+\.(mkv|mpd|avi|flv|webp|webm|divx|ts)\r?\n/', '', $modified_content);
 
 // Remove empty lines that might be left after removing entries
 $modified_content = preg_replace('/^\s*[\r\n]+/m', '', $modified_content);
