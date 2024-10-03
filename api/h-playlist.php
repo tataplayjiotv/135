@@ -1,6 +1,6 @@
 <?php
 // The original M3U playlist URL
-$playlist_url = 'http://localhost:8000/tataplay /m3u.php';
+$playlist_url = 'https://aqiptv-premiumpack.github.io/TataPlay_DS3DF/';
 $serverAddress = $_SERVER['HTTP_HOST'] ?? 'default.server.address';
 
 // Fetch the playlist content
@@ -12,7 +12,7 @@ if ($playlist_content === false) {
 
 // Replace URLs in the playlist
 $modified_content = str_replace(
-    "http://localhost:8000/tataplay /", 
+    "http://210.89.44.180:7676/tataplay/$id/manifest.mpd", 
     "https://$serverAddress/h-play?id=", 
     $playlist_content
 );
