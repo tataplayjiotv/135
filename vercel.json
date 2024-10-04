@@ -139,8 +139,8 @@
       }
     },
     {
-      "src": "/h-play",
-      "dest": "/api/h-play.php",
+      "src": "/manifest.mpd",
+      "dest": "/api/manifest.mpd.php",
       "headers": {
         "Cache-Control": "max-age=84000, public"
       }
