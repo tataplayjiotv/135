@@ -2,7 +2,7 @@
 $serverAddress = $_SERVER['HTTP_HOST'] ?? 'default.server.address';
 
 // The original M3U playlist URL
-$playlist_url = "https://tplay.yuvraj49.in/tp/gflidqa8uzwA/playlist.m3u";
+$playlist_url = "http://b1g.one:80/get.php?username=86439765&password=87549537&type=m3u_plus";
 
 // Fetch the playlist content
 $playlist_content = file_get_contents($playlist_url);
@@ -13,7 +13,7 @@ if ($playlist_content === false) {
 
 // Replace URLs in the playlist
 $modified_content = str_replace(
-    "https://tplay.yuvraj49.in/tp/gflidqa8uzwA/manifest.mpd?id=", 
+    "http://cp.b1g.ooo/live/86439765/87549537/", 
     "https://$serverAddress/s-play?id=", 
     $playlist_content
 );
